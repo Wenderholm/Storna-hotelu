@@ -1,0 +1,385 @@
+$primary:#3292a6;
+$primary-overlay: rgba(50,146,166,0.8);
+$dwcolor: #3cbabe;
+@mixin animation-delay($time) {
+	animation-delay: $time;
+}
+
+
+
+body{
+	position: relative;
+}
+// #nav a{
+// 	height: 86px;
+// 	transition-duration: 600ms;
+// }
+.navbar{
+	box-shadow:2px 2px 5px #FF0000;
+	opacity: 0.9;
+	background:#fff;
+	height: 90px;
+	transition-duration: 600ms;
+	transition-property: all;
+	.nav-item{
+		font-size:1.4rem;
+		padding-right:20px;
+	}
+	svg{
+		font-size: 40px;
+		color: #FC0000;
+	
+	}
+
+}
+.aaa{
+	height: 45px ;
+}
+#baner{
+	position:relative;
+	background: url("../img/banner hotel.jpg") no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 800px;
+	font-size: 40px;
+	.opis{
+	margin-top: 360px;
+	// box-shadow: 10px 10px 131px 50px rgba(255, 255, 255, 0.75);
+	}
+	h2.baner {
+	position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+	display: flex;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-style: normal;
+	font-family: 'Lato';
+	font-weight: 500;
+	color: white;
+	font-size: 3em;
+	text-shadow: -2px -2px 8px rgba(255, 0, 0, 1); 
+	.letter {
+		transform: scale(0);
+		animation: pop-up .45s forwards;		
+		@for $i from 1 through 13 {
+            &:nth-child(#{$i}) {
+                @include animation-delay((0s + ($i * 0.05)));
+            }
+	    }	
+        
+	}
+}
+
+@keyframes pop-up {
+	0%{transform: scale(0) translateY(-10px); opacity: 0;}
+	80%{transform: scale(1.2) translateY(-2px); opacity: .8;}
+	100%{transform: scale(1) translateY(0px); opacity: 1;}
+}
+	.primary-overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+#about{
+	.img-hotel{
+		height: 500px;
+		width: 600px;
+	}
+	.attraction{
+		height: 48px;
+		width: 48px;
+		border: 1px solid black;
+		padding: 8px;
+
+	}	
+	.attractions{
+		margin: auto;
+	}
+	svg{
+		color:#FFF000;
+		font-size: 40px;
+	}
+}
+#gallery{
+	.gal-img{
+		padding: 0px;
+	}
+}
+#reservation{
+	.row-room{
+		margin-top: 20px;
+	}
+	.room1{
+		background-image: url("../img/a1.jpg");
+		background-size:cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 200px;
+	}
+	.room2{
+		background-image: url("../img/a8.jpg");
+		background-size:cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 200px;
+	}
+	.room3{
+		background-image: url("../img/a3.jpg");
+		background-size:cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 200px;
+	}
+	.room4{
+		background-image: url("../img/a4.jpg");
+		background-size:cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 200px;
+	}
+	.room5{
+		background-image: url("../img/a5.jpg");
+		background-size:cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 200px;
+	}
+	.room6{
+		background-image: url("../img/a6.jpg");
+		background-size:cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 200px;
+	}
+	.all-description1, .all-description2, .all-description3, .all-description4, .all-description5, .all-description6{
+		height: 25px;
+		background: rgba(1, 1, 1, 0.7);
+		color:white;
+		margin-top:15%;
+		padding-bottom: 5%;
+	}
+	.desc1, .desc2, .desc3, .desc4, .desc5, .desc6, {
+		opacity: 0;
+		color: white;
+	}
+	button.but1, button.but2, button.but3, button.but4, button.but5, button.but6{
+		opacity: 0;
+	}
+	.room-description{
+		float: left;
+		font-size: 15px;
+		padding-left: 1rem;
+	}
+	.price {
+		float: right;
+	 	font-size: 15px;
+	 	padding-right: 1rem;
+	 	color:#FCFF00;	
+	}
+	// .rooms-desc-hover{
+	// 	opacity: 0;
+	// }
+	
+
+}
+
+#about h3, #gallery h3, #reservation h3, .contact h3{
+	color: black;
+	font-weight: 700;
+	text-shadow: 0 0 8px red;
+}
+.contact{
+	#mapka{
+		width:100%; 
+		height: 300px; 
+		border: 1px solid black; 
+		background: grey;
+	}
+	svg {
+	color:#fff;
+	background: #333;
+	border-radius: 5px;
+	font-size: 50px;
+	}
+	.icons{
+		height: 48px;
+		width: 48px;
+		padding: 8px;
+		border: 1px solid black;
+	}
+	.contact-text{
+		margin-bottom: 50px;
+	}
+}
+#main-footer{
+	color: white;
+}
+
+@media (max-width: 380px){
+ 		.navbar{
+ 			height:auto;
+ 			h3{
+ 				font-size: 1rem !important;
+ 			}
+ 		}
+ 		h2.baner {
+ 			font-size: 2rem !important;
+ 		}
+ 		#about{
+ 			svg{
+			font-size: 10px;
+			}
+			.star{
+				display: none !important;	
+			}
+			.images-s{
+				display: none !important;
+			}
+ 		}
+ 		#gallery{
+ 			div.row{
+ 				margin:0;
+ 			}
+ 		}
+}
+@media (min-width: 381px) and (max-width: 769px){
+ 		.navbar{
+ 			
+ 			h3{
+ 				font-size: 1rem !important;
+ 			}
+ 			li.nav-item{
+ 				font-size: 1rem !important;
+ 			}
+ 		}
+ 		h2.baner {
+ 			font-size: 4rem !important;
+ 		}
+ 		#about{
+ 			svg{
+			font-size: 10px;
+			}
+			.star{
+				display: none !important;	
+			}
+			.images-s{
+				display: none !important;
+			}
+ 		}
+ 		#gallery{
+ 			div.row{
+ 				margin:0;
+ 			}
+ 		}
+}
+
+/*--------------------------------------------------------------
+## opis animacji na stornie - pojawiające sie obrazy i napisy 
+--------------------------------------------------------------*/
+
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility:visible; 
+}
+
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+.sP {visibility:hidden;}
+.slideP{
+    /* The name of the animation */
+    animation-name: slideX1;
+    -webkit-animation-name: slideX1; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+@keyframes slideX1 {
+    0% {
+        opacity: 0;
+        transform: translateX(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    } 
+}
+@-webkit-keyframes slideX1 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+    }
+}
+
+.sL {visibility:hidden;}
+.slideL{
+    /* The name of the animation */
+    animation-name: slideX2;
+    -webkit-animation-name: slideX2; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+@keyframes slideX2 {
+    0% {
+        opacity: 0;
+        transform: translateX(-70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    } 
+}
+@-webkit-keyframes slideX2 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+    }
+}
