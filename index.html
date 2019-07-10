@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Hotel website</title>
+	<meta name="author" content="Przemysław Wenderholm" />
+	<meta name="robots" content="index, follow" />
+	<meta name="keywords" content="hotel,hotel phoenix, phoenix, ognisty, niedrogi, hotel pomorze, relax, " />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCNuS89yYdzFoNjbAj39zsVr7hqFTHKrCg">
+	</script>
+	<script type="text/javascript" src="js/mapa.js"></script>
+</head>
+<body id="home" onload="mapaStart();">
+	<!-- Navigacja strony  -->
+	<div class="small">
+		<nav class="navbar navbar-expand-md navbar-light fixed-top" id="nav">
+			<div class="container">
+				<a class="navbar-brand">
+					<div class="p-3"> 
+						<a >
+							<i class="fab fa-phoenix-framework"></i>
+						</a> 
+					</div>
+					<h3 class="d-inline align-middle">Hotel Phoenix</h3>
+				</a>
+
+				<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a href="#home" class="nav-link">Home</a>
+						</li>
+						<li class="nav-item">
+							<a href="#about" class="nav-link">O nas</a>
+						</li>
+						<li class="nav-item">
+							<a href="#gallery" class="nav-link">Galeria</a>
+						</li>
+						<li class="nav-item">
+							<a href="#reservation" class="nav-link">Rezerwacja</a>
+						</li>
+						<li class="nav-item">
+							<a href="#contact" class="nav-link">Kontakt</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<section id="baner" >
+		<div class="primary-overlay text-white">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center opis">
+						<p class="display-2 ">
+							<h2 class="baner">
+							    <div class="letter">H</div>
+							    <div class="letter">O</div>
+								<div class="letter">T</div>
+								<div class="letter">E</div>
+								<div class="letter">L</div>
+								<div class="letter"> &nbsp; </div>
+								<div class="letter">P</div>
+								<div class="letter">H</div>
+								<div class="letter">O</div>
+							    <div class="letter">E</div>
+							    <div class="letter">N</div>
+							    <div class="letter">I</div>
+							    <div class="letter">X</div>
+							</h2>
+						</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</section>
+	<section id="about" class="about bg-light text-muted py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center my-3 slideanim">
+					<h3 >O NASZYM HOTELU</h3>
+					<p >Hotel Phoenix w Rumi to miejsce wyjątkowe. Obiekt  położony jest na porośniętym starodrzewiem Wzgórzu Parkowym. Oryginalna bryła architektoniczna hotelu z wieloma tarasami i wieżyczkami doskonale wkomponowuje się w otoczenie, nadając miejscu kameralny klimat, sprzyjający wypoczynkowi i spotkaniom w atmosferze relaksu i odprężenia. </p>
+				</div>
+			</div>
+			<div class="row mt-4">
+				<div class="col-md-6 sL">
+					<img src="img/hotel inside.jpg" alt="hotel" class="img-fluid img-hotel" >
+				</div>
+				<div class="col-md-6 sP">
+					<div class="d-flex flex-row">
+						<div class="p-4 d-flex align-items-center star">
+							<i class="fas fa-star"></i>
+						</div>
+						<div class="p-4 aligne-self-end text-justify">
+							W hotelu znajduje się stylowa restauracja  ze wspaniałym tarasem oraz Parkowy Klub Muzyczny gdzie regularnie odbywają się koncerty jazzowe i  rockowe. Klub mieści się w oryginalnym Pubie czynnym w weekendy do późnych godzin nocnych, gdzie serwowane są nietypowe piwa z różnych stron świata oraz wyszukane drinki.
+						</div>
+					</div>
+					<div class="d-flex flex-row">
+						<div class="p-4 d-flex align-items-center star">
+							<i class="fas fa-star"></i>
+						</div>
+						<div class="p-4 aligne-self-end text-justify">
+							Na terenie hotelu zapewniamy wiele atrakcji, które umilą czas każdemu. Do wyboru macie baseny z pięcioma ogromnymi zjeżdżalnimi, jacuzzi i sałny suche oraz mokre. W cecnie aprtmentu mają Państwo do dyspozycji rowery górskie i miejskie
+						</div>
+					</div>
+					<div class="row d-flex justify-content-center images-s">
+						<div class="col-lg-4 col-ms-4 col-sm-6	 col-xs-6 col-0-padding">
+							<div class="row row-flex attractions-desc">
+								<div class="col-lg-4">
+									<img  src="img/swimming.png" alt="" class="attraction">
+								</div>
+								<div class="col-lg-8 d-flex align-items-center">
+									<p>Baseny</p>
+								</div>
+							</div>
+							<div class="row row-flex attractions-desc mt-2">
+								<div class="col-lg-4">
+									<img  src="img/bicycle.png" alt="" class="attraction">
+								</div>
+								<div class="col-lg-8 d-flex align-items-center">
+									<p>Rowery</p>
+								</div>
+							</div>
+							<div class="row row-flex attractions-desc mt-2">
+								<div class="col-lg-4">
+									<img  src="img/jacuzzi.png" alt="" class="attraction">
+								</div>
+								<div class="col-lg-8 d-flex align-items-center">
+									<p>Jacuzzi</p>
+								</div>
+							</div>
+						</div>	
+						<div class="col-lg-4 col-ms-4 col-sm-6 col-xs-6 col-0-padding">
+							<div class="row row-flex attractions-desc">
+								<div class="col-lg-4">
+									<img  src="img/sauna.png" alt="" class="attraction">
+								</div>
+								<div class="col-lg-8 d-flex align-items-center">
+									<p>Sauny</p>
+								</div>
+							</div>
+							<div class="row row-flex attractions-desc mt-2">
+								<div class="col-lg-4">
+									<img  src="img/dancing.png" alt="" class="attraction">
+								</div>
+								<div class="col-lg-8 d-flex align-items-center">
+									<p>Disco</p>
+								</div>
+							</div>
+							<div class="row row-flex attractions-desc mt-2">
+								<div class="col-lg-4">
+									<img  src="img/grill.png" alt="" class="attraction">
+								</div>
+								<div class="col-lg-8 d-flex align-items-center">
+									<p>Grill</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+	</section>
+	<section id="gallery">
+		<div class="row">
+			<div class="col text-center my-5 ">
+				<h3>HOTELOWA GALERIA</h3>
+			</div>
+		</div>
+		<div class="row ">
+			<div class="col-lg-3 gal-img sL">
+				<img src="img/a1.jpg" class="img-fluid">
+			</div>
+			<div class="col-lg-3 gal-img sL">
+				<img src="img/a2.jpg" class="img-fluid">
+			</div>
+			<div class="col-lg-3 gal-img sL">
+				<img src="img/a3.jpg" class="img-fluid">
+			</div>
+			<div class="col-lg-3 gal-img sL"> 
+				<img src="img/a4.jpg" class="img-fluid">
+			</div>
+		</div>
+		<div class="row ">
+			<div class="col-lg-3 gal-img sP">
+				<img src="img/a5.jpg" class="img-fluid">
+			</div>
+			<div class="col-lg-3 gal-img sP">
+				<img src="img/a6.jpg" class="img-fluid">
+			</div>
+			<div class="col-lg-3 gal-img sP">
+				<img src="img/a7.jpg" class="img-fluid">
+			</div>
+			<div class="col-lg-3 gal-img sP"> 
+				<img src="img/a8.jpg" class="img-fluid">
+			</div>
+		</div>
+	</section>
+	<section id="reservation" class="bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center py-5 ">
+					<h3>ZAREZERWUJ POKÓJ</h3>
+				</div>
+			</div>
+			<div class="row row-room">
+				<div class="col-lg-4">
+					<div class="room1">
+						<!-- <img src="img/a1.jpg" class="img-fluid"> -->
+						<div class="rooms-desc-hover1 text-center">
+							<p class="desc1">Apartament z dwiema sypialniami, pokojem gościnnym i aneksem kuchennym</p>
+							<button class="btn btn-secondary but1" data-toggle="modal" data-target="#reservationModal">REZERWACJA</button>	
+						</div>
+
+						<div class="all-description1">
+							<p class="room-description">Jula 50m2</p>
+							<p class="price">400zł/NOC</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="room2">
+					
+						<div class="rooms-desc-hover2 text-center">
+							<p class="desc2">Apartament z jedną sypialnią, pokojem gościnnym</p>
+							<button class="btn btn-secondary but2" data-toggle="modal" data-target="#reservationModal">REZERWACJA</button>	
+						</div>
+
+						<div class="all-description2">
+							<p class="room-description">Zofia 52m2</p>
+							<p class="price">430zł/NOC</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="room3">
+						
+						<div class="rooms-desc-hover3 text-center">
+							<p class="desc3">Apartament z dwiema sypialniami, pokojem gościnnym</p>	
+							<button class="btn btn-secondary but3" data-toggle="modal" data-target="#reservationModal">REZERWACJA</button>			
+						</div>
+						<div class="all-description3">
+							<p class="room-description">Ewka 45m2</p>
+							<p class="price">350zł/NOC</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-room">
+				<div class="col-lg-4">
+					<div class="room4">						
+						<div class="rooms-desc-hover4 text-center">
+							<p class="desc4">Apartament z trzema sypialniami, pokojem gościnnym, aneksem kuchennym i jacuzzi</p>
+							<button class="btn btn-secondary but4" data-toggle="modal" data-target="#reservationModal">REZERWACJA</button>	
+						</div>
+
+						<div class="all-description4">
+							<p class="room-description">Danusia 60m2</p>
+							<p class="price">500zł/NOC</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="room5">
+						<div class="rooms-desc-hover5 text-center">
+							<p class="desc5">Apartament z dwiema sypialniami i aneksem kuchennym</p>		
+							<button class="btn btn-secondary but5 " data-toggle="modal" data-target="#reservationModal">REZERWACJA</button>						
+						</div>
+						<div class="all-description5">
+							<p class="room-description">Basia 50m2</p>
+							<p class="price">400zł/NOC</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="room6">						
+						<div class="rooms-desc-hover6 text-center">
+							<p class="desc6">Apartament z dwiema sypialniami, pokojem gościnnym i aneksem kuchennym</p>		
+							<button class="btn btn-secondary but6" data-toggle="modal" data-target="#reservationModal">REZERWACJA</button>						
+						</div>
+						<div class="all-description6">
+							<p class="room-description">Kasia 40m2</p>
+							<p class="price">300zł/NOC</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="contact" class="contact pb-5">
+			<div class="container pb-5">
+			<div class="row">
+				<div class="col text-center py-5 ">
+					<h3>ZNAJDŹ NAS</h3>
+				</div>
+			</div>
+				<div class="row">
+					<div class="col-lg-6 col-ms-6 col-sm-6 col-xs-12">
+						<div id="mapka">
+						</div>
+					</div>
+					<div class="col-lg-6 col-ms-6 col-sm-6 col-xs-12">
+						<p class="contact-text">Nasz hotel mieści się tuż przy plaży. W okolicy znajdują się liczne bary, restauracje, sklepy z pamiątkami oraz wypożyczalnia sprzętu wodnego.</p>	
+						<div class="row row-flex d-flex align-items-center ">
+							<div class="col-lg-3 gal-img text-center">
+								<img src="img/facebook-placeholder-for-locate-places-on-maps.png" class="icons">
+							</div>
+							<div class="col-lg-9 ">
+								<p class="contact-desc">Paseo de Gomiz, 3, 03002 Alicante, Hiszpania</p>
+							</div>
+						</div>
+						<div class="row row-flex d-flex align-items-center mt-2">
+							<div class="col-lg-3 gal-img text-center">
+								<img src="img/phone-receiver.png" class="icons">
+							</div>
+							<div class="col-lg-9">
+								<p class="contact-desc">965 846 75 78</p>
+							</div>
+						</div>
+						<div class="row row-flex d-flex align-items-center mt-2">
+							<div class="col-lg-3 gal-img text-center">
+								<img src="img/envelope.png" class="icons">
+							</div>
+							<div class="col-lg-9">
+								<p class="contact-desc">PhoeniX@hotel.eu</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer id="main-footer" class="bg-dark ">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="py-4">
+						<h3>HOTEL PHOENIX</h3>
+						<button class="btn btn-primary" data-toggle="modal" data-target="#contactModal">NAPISZ DO NAS</button>
+						<p class="py-2">Copyraight &copy; 2018</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</footer>
+	
+	<!-- okienko modalne do footera -->
+	
+
+	<div class="modal fade text-dark" id="reservationModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title text-center" id="reservationModalTitle">ZAREZERWUJ APARTAMENT</h5>
+					<button class="close" data-dismiss="modal"><span>&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="startData">Od kiedy rezerwacja</label>
+							<input type="date" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="endData">Do kiedy rezewacja</label>
+							<input type="date" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="number">Ile osób przyjedzie</label>
+							<input type="number" class="form-control"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary btn-block">WYŚLIJ</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade text-dark" id="contactModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="contactModalTitle">Napisz do nas </h5>
+					<button class="close" data-dismiss="modal"><span>&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="name">Twoja nazwa</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="Email">Email</label>
+							<input type="email" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="message">Wiadomość do nas</label>
+							<textarea type="text" class="form-control"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary btn-block">WYŚLIJ</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script type="text/javascript" src="js/fontawesome-all.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/slide.js"></script>
+		<script type="text/javascript" src="js/reservation.js"></script>
+		<script src="js/navigation-change.js"></script>
+		<script src="js/translate.js"></script>
+</body>
+</html>
